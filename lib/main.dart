@@ -4,11 +4,15 @@ import 'package:audioplayers/audioplayers.dart';
 void main() => runApp(PianoKeysApp());
 
 class PianoKeysApp extends StatelessWidget {
+  //criacao do metodo que toca a nota de acordo com o numero designado da nota;
+  // Na pasta /assets estao as notas com suas nomeclaturas
   void playNote(int noteNumber) {
     final player = AudioCache();
     player.play('note$noteNumber.wav');
   }
-
+  
+  //metodo de criação padronizada das teclas brancas,
+  //o tamanho delas, o botão interativo, a cor e o a ação de quando o botão é pressionado;
   Container buildWhiteKey({required int noteNumber}) {
     return Container(
       height: 80.0,
@@ -29,6 +33,7 @@ class PianoKeysApp extends StatelessWidget {
     );
   }
 
+  //Metodo para criacao de teclas pretas, segue o mesmo principio do de cima, alterando o formato e cor
   Container buildBlackKey({required int noteNumber}) {
     return Container(
       width: 220.0,
@@ -48,7 +53,10 @@ class PianoKeysApp extends StatelessWidget {
       ),
     );
   }
-
+  
+  
+//Criacao do layout das teclas na tela, o fundo é preto,
+  //Dentro do metodo de criacao de tecla esta a nota designada de cada tecla;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
