@@ -1,9 +1,9 @@
 # piano_keys_flutter
 
-# Base do programa de criação da simulação de teclas de um piano:
--Arquivos de WAV são importados do FL Studio;
+# Piano keys simulation App:
+-Implementing WAV files from FL Studio into the app;
 
--Utilização da Audioplayers do repositório Dart Packages;
+-Audioplayers Dart package used in project;
 
--Botões interativos utilizando Stack widget;
+-Interacive Buttons implemented with Stack widget;
 
